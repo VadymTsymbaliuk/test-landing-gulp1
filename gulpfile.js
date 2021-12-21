@@ -6,10 +6,12 @@ const sourcemaps = require('gulp-sourcemaps');
 const appPath = {
     scss:'./app/scss/**/*.scss',
     pug: './app/index.pug',
+    img: './app/img/**/*.*'
 }
 const destPath = {
     css: './dest/css',
     html: './dest',
+    img: './dest/img',
 }
 function buildStyles() {
     return src(appPath.scss)
@@ -41,10 +43,14 @@ function startLocalServer(){
         livereload: true
     });
 }
+function copyImages(){
+    return src(appPath.img)
+        .pipe(dest(destPath.img))
+}
 
 function watchCode(){
     watch(appPath.scss, buildStyles)
     watch(appPath.pug, buildHtml)
 }
 
-exports.default = series(buildStyles , buildHtml, parallel(startLocalServer, watchCode))
+exports.default = series(buildStyles , buildHtml, copyImages, parallel(startLocalServer, watchCode))

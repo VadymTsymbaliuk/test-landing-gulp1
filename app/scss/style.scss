@@ -1,2 +1,60 @@
 @import "node_modules/bootstrap/scss/bootstrap";
 
+$font-size: 24px;
+$dark-green:#0B4141;
+$darker-green:#0b1f1f;
+$accent-color: #FFCCBC;
+
+
+
+html, body {
+  font-size: $font-size;
+  color: $dark-green;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 3.33333rem;
+}
+
+h3 {
+  font-size: 2.83333rem;
+}
+a, .nav-item a{
+  color: $dark-green;
+  &:hover{
+    color: $dark-green;
+    text-decoration: none;
+  }
+}
+img{
+  max-width: 100%;
+}
+//*****
+.section{
+  padding: 100px 0;
+}
+
+//*****
+.section_1{
+  padding: 120px 0 290px;
+  position: relative;
+  img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      bottom: 0;
+  }
+  h1 span:last-child{
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(to bottom, $dark-green 50%, $darker-green 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
