@@ -4,12 +4,14 @@ $font-size: 24px;
 $dark-green:#0B4141;
 $darker-green:#0b1f1f;
 $accent-color: #FFCCBC;
+$light-gray: #e5e5e5;
 
 
 
 html, body {
   font-size: $font-size;
   color: $dark-green;
+  background-color: $light-gray;
 }
 
 h1 {
