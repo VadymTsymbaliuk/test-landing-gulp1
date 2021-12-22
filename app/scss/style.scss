@@ -52,6 +52,21 @@ b{
 .bg-dark-green{
   background: $dark-green
 }
+.block-even-odd{
+  .row {
+    align-items: center;
+    &:nth-child(even) {
+      [class*='col']:first-child {
+        order: 2;
+        text-align: right;
+      }
+
+      [class*='col']:last-child {
+        order: 1;
+      }
+    }
+  }
+}
 //*****
 .section_1{
   padding: 120px 0 120px;
@@ -84,14 +99,51 @@ b{
     width: auto;
   }
 }
-.section_4{
-  .row:nth-child(even){
-    div:first-child{
-      order: 2;
-      text-align: right;
+
+.section_5{
+  background: rgba(245,245,245,0.6);
+  padding: 117px 0 370px;
+  background: url("./../img/sec_5_horses.png") center bottom no-repeat;
+  background-size: 100%;
+}
+.section_6{
+  padding: 65px 0 170px;
+  background: linear-gradient(180deg, #FFCCBC 0%, rgba(255, 204, 188, 0) 100%),
+  url("./../img/sec_6_bg_horses.png") center;
+  .item{
+    width: calc((100% - 48px)/3);
+    min-width: 200px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 4.44444px;
+    backdrop-filter: blur(6.66667px);
+    margin-bottom: 24px;
+    &-author{
+      .item-author-image img{
+        margin-right: 12px;
+        min-width: 48px;
+      }
+      p{
+        margin: 0;
+      }
     }
-    div:last-child{
-      order: 1;
-    }
+  }
+}
+.section_7{
+  padding-bottom: 0;
+  background: url("./../img/sec_7_confety.png") top left no-repeat,
+  url("./../img/sec_7_light.png") bottom right no-repeat;
+  .row:first-child{
+    margin-bottom: 245px;
+  }
+
+}
+footer.section{
+  padding: 236px 0 100px;
+  .footer-download{
+    margin-bottom: 110px;
+  }
+  p{
+    margin: 0;
   }
 }
