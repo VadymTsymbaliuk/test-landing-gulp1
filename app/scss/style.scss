@@ -11,7 +11,6 @@ $light-gray: #e5e5e5;
 html, body {
   font-size: $font-size;
   color: $dark-green;
-  background-color: $light-gray;
 }
 
 h1 {
@@ -24,6 +23,7 @@ h2 {
 
 h3 {
   font-size: 2.83333rem;
+  font-weight: 900;
 }
 a, .nav-item a{
   color: $dark-green;
@@ -34,19 +34,31 @@ a, .nav-item a{
 }
 img{
   max-width: 100%;
+
+}
+b{
+  font-weight: 800;
 }
 //*****
 .section{
   padding: 100px 0;
 }
-
+.text-accent{
+  color: $accent-color;
+}
+.bg-accent{
+  background-color: $accent-color;
+}
+.bg-dark-green{
+  background: $dark-green
+}
 //*****
 .section_1{
-  padding: 120px 0 290px;
+  padding: 120px 0 120px;
   position: relative;
   img{
       position: absolute;
-      top: 0;
+      //top: 0;
       left: 0;
       right: 0;
       margin: auto;
@@ -58,5 +70,28 @@ img{
     background: linear-gradient(to bottom, $dark-green 50%, $darker-green 50%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+}
+.section_2{
+  padding: 195px 0;
+  background-image: url("../img/sec_2_bg.png");
+  background-position: center;
+}
+.section_3{
+  padding: 0;
+  img{
+    min-height: 700px;
+    width: auto;
+  }
+}
+.section_4{
+  .row:nth-child(even){
+    div:first-child{
+      order: 2;
+      text-align: right;
+    }
+    div:last-child{
+      order: 1;
+    }
   }
 }
