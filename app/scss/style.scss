@@ -1,4 +1,5 @@
 @import "node_modules/bootstrap/scss/bootstrap";
+@import "fonts";
 
 $font-size: 24px;
 $dark-green:#0B4141;
@@ -6,27 +7,30 @@ $darker-green:#0b1f1f;
 $accent-color: #FFCCBC;
 $light-gray: #e5e5e5;
 
-
-
 html, body {
   font-size: $font-size;
   color: $dark-green;
+  font-family: 'Nunito Sans', sans-serif;
 }
-
 h1 {
   font-size: 5rem;
+  font-family: "Mother Corpus", sans-serif;
+  line-height: 5.333rem;
 }
-
 h2 {
   font-size: 3.33333rem;
+  font-family: "Mother Corpus", sans-serif;
+  line-height: 4rem;
 }
-
 h3 {
   font-size: 2.83333rem;
   font-weight: 900;
+  line-height: 3rem;
 }
 a, .nav-item a{
   color: $dark-green;
+  font-size: 0.75rem;
+
   &:hover{
     color: $dark-green;
     text-decoration: none;
@@ -38,6 +42,9 @@ img{
 }
 b{
   font-weight: 800;
+}
+p{
+  line-height: 1.33rem;
 }
 //*****
 .section{
@@ -67,7 +74,46 @@ b{
     }
   }
 }
+.font-family-motter{
+  font-family: "Mother Corpus", sans-serif;
+}
+.btn{
+  border-radius: 124px;
+  padding: 12.45px;
+  &.btn-border{
+    border: 2px solid currentColor;
+  }
+  &.btn-border-bottom-no{
+    border-bottom-color: transparent;
+  }
+}
+
 //*****
+header {
+  .navbar{
+    &-brand{
+      font-size: 26px;
+      line-height: 31px;
+    }
+    &-nav{
+      li.nav-item {
+        a{
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 22px;
+        }
+        a.active{
+          border-bottom: 2px solid $dark-green;
+        }
+      }
+    }
+  }
+  .form-download{
+    button{
+      margin-left: 36px;
+    }
+  }
+}
 .section_1{
   padding: 120px 0 120px;
   position: relative;
@@ -93,16 +139,14 @@ b{
   background-position: center;
 }
 .section_3{
-  padding: 0;
-  img{
-    min-height: 700px;
-    width: auto;
+  padding: 120px 0 85px;
   }
+.section_4{
+  padding: 120px 0 60px;
 }
-
 .section_5{
   background: rgba(245,245,245,0.6);
-  padding: 117px 0 370px;
+  padding: 120px 0 370px;
   background: url("./../img/sec_5_horses.png") center bottom no-repeat;
   background-size: 100%;
 }
@@ -110,24 +154,36 @@ b{
   padding: 65px 0 170px;
   background: linear-gradient(180deg, #FFCCBC 0%, rgba(255, 204, 188, 0) 100%),
   url("./../img/sec_6_bg_horses.png") center;
-  .item{
-    width: calc((100% - 48px)/3);
-    min-width: 200px;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 4.44444px;
-    backdrop-filter: blur(6.66667px);
-    margin-bottom: 24px;
-    &-author{
-      .item-author-image img{
-        margin-right: 12px;
-        min-width: 48px;
-      }
-      p{
-        margin: 0;
+  .comments{
+    font-size: 13px;
+    p{
+      line-height: 18px;
+    }
+    .item{
+      width: calc((100% - 48px)/3);
+      min-width: 200px;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 4.44444px;
+      backdrop-filter: blur(6.66667px);
+      margin-bottom: 1rem;
+      &-author{
+        .item-author-image img{
+          margin-right: 12px;
+          min-width: 48px;
+        }
+        b{
+          font-size: 16px;
+        }
+
+        p{
+          margin: 0;
+          font-size: 14px;
+        }
       }
     }
   }
+
 }
 .section_7{
   padding-bottom: 0;
@@ -136,14 +192,39 @@ b{
   .row:first-child{
     margin-bottom: 245px;
   }
-
 }
 footer.section{
   padding: 236px 0 100px;
-  .footer-download{
-    margin-bottom: 110px;
+  a{
+    display: flex;
+    color: $accent-color;
+    text-align: left;
   }
   p{
     margin: 0;
+  }
+  .footer{
+    &-download{
+      margin-top: 50px;
+      margin-bottom: 110px;
+      a{
+        padding: 1rem 3rem;
+        margin: 0 25px;
+      }
+    }
+
+    &-bottom{
+      h4{
+        font-family: "Mother Corpus", sans-serif;
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 8px;
+      }
+      p{
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 600;
+      }
+    }
   }
 }

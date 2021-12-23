@@ -1,14 +1,18 @@
 doctype html
-html(lang='en')
+html(lang='ua')
     head
         meta(charset='UTF-8')
+        meta(name="viewport" content="width=device-width, initial-scale=1")
         title test html page
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet")
         link(rel='stylesheet' href='./css/style.css')
     body
         header
             .container
                 nav.navbar.navbar-expand-lg
-                    a.navbar-brand(href='#') Cornelia
+                    a.navbar-brand.font-family-motter(href='#') Cornelia
                     button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
                         span.navbar-toggler-icon
                     #navbarNav.collapse.navbar-collapse
@@ -19,8 +23,8 @@ html(lang='en')
                                 a.nav-link(href='#') About
                             li.nav-item
                                 a.nav-link(href='#') Why
-                    form.form-inline
-                        button.btn(type='submit') Download
+                    form.form-inline.form-download
+                        button.btn.bg-dark-green.text-accent(type='submit') Download
 
         section.section.section_1
             .container.text-center
@@ -40,7 +44,7 @@ html(lang='en')
                     .col-6
                         h3 Choose your destiny
                         p Each unicorn has its own personality and symbolism. Get to know your new mascot and surround yourself with a strong ally. Thus choose the brave one and you will be able to face any situation. Take the sweet Cornelia and protect your health. If you need more luck, meet the Magic Cornelia! If you’re born to be bold, choose the Impetuous Cornelia : nothing will defeat you.
-                        a.btn.btn-transparent(href='#') Learn more about her story
+                        a.btn.btn-border.text-accent(href='#') Learn more about her story
                     .col-6
                         img(src="./img/sec_3_horse.png")
 
@@ -52,9 +56,9 @@ html(lang='en')
                     .col-6
                         h3 Always <br>Go Further
                         p Decline Cornelia as you wish! Black, dark grey, white, light grey, prussian blue ... Choose your colour, size and characteristics! And if that's not enough, personalise it to make it unique, in your own image. So open up the field of possibilities,  the world is yours !
-                        a(href='#')
-                            img(src='./img/sec_4_scroll_mouse.png')
-                            |Scroll TO KNOW MORE
+                        a.d-flex.align-items-center(href='#')
+                            img.me-2(src='./img/sec_4_scroll_mouse.png')
+                            span.text-uppercase Scroll TO KNOW MORE
                 .row
                     .col-6
                         img(src='./img/sec_4_horse_green.png')
@@ -72,7 +76,7 @@ html(lang='en')
         section.section.section_6
             .container
                 h3.text-white They talk about it better than us
-                .d-flex.flex-wrap.justify-content-between
+                .d-flex.flex-wrap.justify-content-between.comments
                     .item
                             p You've saved our business! Since I invested in Cornelia I made over 100,000 dollars profits. Thank you so much for your help
                             .item-author.d-flex.align-items-center
@@ -144,7 +148,7 @@ html(lang='en')
                     .col-6
                         h3 Always <br>Go Further
                         p Decline Cornelia as you wish! Black, dark grey, white, light grey, prussian blue ... Choose your colour, size and characteristics! And if that's not enough, personalise it to make it unique, in your own image. So open up the field of possibilities,  the world is yours !
-                        a.btn.btn-primary(href='#') Discover Cornelia
+                        a.btn.btn-border(href='#') Discover Cornelia
 
                 .row
                     .col-6
@@ -154,18 +158,18 @@ html(lang='en')
                             img(src='./img/sec_7_logo-app-store.png')
                         h3 Premium <br>  3D Quality
                         p Now the difference between a unicorn and a pegasus is quite clear a unicorn has a horn which usually stores their magically powers while a pegasus can only fly with its gorgeous wings. Now the difference between a unicorn and a pegasus is quite clear a unicorn has a horn.
-                        a.btn.btn-primary(href='#') Meet Cornelia in VR
+                        a.btn.btn-border(href='#') Meet Cornelia in VR
 
         footer.section.bg-dark-green.text-accent
             .container
                 h2.text-center Get started with<br>Cornelia today
-                div.d-flex.justify-content-around.footer-download
-                    a.btn.btn-success(href='#')
-                        img(src='./img/icons/Figma-logo 1.svg')
+                div.d-flex.justify-content-center.footer-download
+                    a.btn.btn-border.btn-border-bottom-no(href='#')
+                        img.me-2(src='./img/icons/Figma-logo 1.svg')
                         span.text-accent Download for <br>Figma
-                    a.btn.btn-success(href='#')
-                        img(src='./img/icons/Sketch_Logo 1.svg')
+                    a.btn.btn-border.btn-border-bottom-no(href='#')
+                        img.me-2(src='./img/icons/Sketch_Logo 1.svg')
                         span.text-accent Download for <br>Sketch
-                div
+                .footer-bottom
                     h4 Cornelia
                     p Design & Development
