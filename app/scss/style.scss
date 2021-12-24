@@ -195,13 +195,16 @@ header {
   }
 
   .comments {
+    align-content: flex-start;
     font-size: 13px;
 
     p {
       line-height: 18px;
+      margin-bottom: 16px;
     }
 
     .item {
+      align-self: flex-start;
       width: calc((100% - 48px) / 3);
       min-width: 200px;
       padding: 20px;
