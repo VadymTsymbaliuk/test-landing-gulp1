@@ -2,8 +2,8 @@
 @import "fonts";
 
 $font-size: 24px;
-$dark-green:#0B4141;
-$darker-green:#0b1f1f;
+$dark-green: #0B4141;
+$darker-green: #0b1f1f;
 $accent-color: #FFCCBC;
 $light-gray: #e5e5e5;
 
@@ -12,56 +12,77 @@ html, body {
   color: $dark-green;
   font-family: 'Nunito Sans', sans-serif;
 }
+
 h1 {
   font-size: 5rem;
   font-family: "Mother Corpus", sans-serif;
   line-height: 5.333rem;
 }
+
 h2 {
   font-size: 3.33333rem;
   font-family: "Mother Corpus", sans-serif;
   line-height: 4rem;
+  margin-bottom: 1rem;
 }
+
 h3 {
   font-size: 2.83333rem;
   font-weight: 900;
   line-height: 3rem;
+  margin-top: 1.3333rem;
+  margin-bottom: 1.333rem;
 }
-a, .nav-item a{
+
+a, .nav-item a {
   color: $dark-green;
   font-size: 0.75rem;
 
-  &:hover{
+  &:hover {
     color: $dark-green;
     text-decoration: none;
   }
 }
-img{
+
+img {
   max-width: 100%;
 
 }
-b{
+
+b {
   font-weight: 800;
 }
-p{
+
+p {
   line-height: 1.33rem;
+  margin-bottom: 2rem;
 }
+
 //*****
-.section{
+.section {
   padding: 100px 0;
 }
-.text-accent{
+
+.text-accent {
   color: $accent-color;
 }
-.bg-accent{
+
+.bg-accent {
   background-color: $accent-color;
 }
-.bg-dark-green{
+
+.bg-dark-green {
   background: $dark-green
 }
-.block-even-odd{
+
+.block-even-odd {
   .row {
     align-items: center;
+
+    &:not(:last-child) {
+      margin-bottom: 120px;
+    }
+
     &:nth-child(even) {
       [class*='col']:first-child {
         order: 2;
@@ -74,58 +95,68 @@ p{
     }
   }
 }
-.font-family-motter{
+
+.font-family-motter {
   font-family: "Mother Corpus", sans-serif;
 }
-.btn{
+
+.btn {
   border-radius: 124px;
   padding: 12.45px;
-  &.btn-border{
+
+  &.btn-border {
     border: 2px solid currentColor;
   }
-  &.btn-border-bottom-no{
+
+  &.btn-border-bottom-no {
     border-bottom-color: transparent;
   }
 }
 
 //*****
 header {
-  .navbar{
-    &-brand{
+  .navbar {
+    &-brand {
       font-size: 26px;
       line-height: 31px;
     }
-    &-nav{
+
+    &-nav {
       li.nav-item {
-        a{
+        a {
           font-weight: 600;
           font-size: 16px;
           line-height: 22px;
         }
-        a.active{
+
+        a.active {
           border-bottom: 2px solid $dark-green;
         }
       }
     }
   }
-  .form-download{
-    button{
+
+  .form-download {
+    button {
       margin-left: 36px;
     }
   }
 }
-.section_1{
+
+.section_1 {
   padding: 120px 0 120px;
   position: relative;
-  img{
-      position: absolute;
-      //top: 0;
-      left: 0;
-      right: 0;
-      margin: auto;
-      bottom: 0;
+
+  img {
+    position: absolute;
+    //top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 0;
   }
-  h1 span:last-child{
+
+  h1 span:last-child {
     position: relative;
     z-index: 1;
     background: linear-gradient(to bottom, $dark-green 50%, $darker-green 50%);
@@ -133,50 +164,63 @@ header {
     -webkit-text-fill-color: transparent;
   }
 }
-.section_2{
+
+.section_2 {
   padding: 195px 0;
   background-image: url("../img/sec_2_bg.png");
   background-position: center;
 }
-.section_3{
+
+.section_3 {
   padding: 120px 0 85px;
-  }
-.section_4{
-  padding: 120px 0 60px;
 }
-.section_5{
-  background: rgba(245,245,245,0.6);
+
+.section_4 {
+  padding: 120px 0 96px;
+}
+
+.section_5 {
   padding: 120px 0 370px;
-  background: url("./../img/sec_5_horses.png") center bottom no-repeat;
+  background: rgba(245, 245, 245, 0.6) url("./../img/sec_5_horses.png") center bottom no-repeat;
   background-size: 100%;
 }
-.section_6{
+
+.section_6 {
   padding: 65px 0 170px;
   background: linear-gradient(180deg, #FFCCBC 0%, rgba(255, 204, 188, 0) 100%),
   url("./../img/sec_6_bg_horses.png") center;
-  .comments{
+
+  h3 {
+    margin-bottom: 2.666rem;
+  }
+
+  .comments {
     font-size: 13px;
-    p{
+
+    p {
       line-height: 18px;
     }
-    .item{
-      width: calc((100% - 48px)/3);
+
+    .item {
+      width: calc((100% - 48px) / 3);
       min-width: 200px;
       padding: 20px;
       background-color: rgba(255, 255, 255, 0.8);
       border-radius: 4.44444px;
       backdrop-filter: blur(6.66667px);
       margin-bottom: 1rem;
-      &-author{
-        .item-author-image img{
+
+      &-author {
+        .item-author-image img {
           margin-right: 12px;
           min-width: 48px;
         }
-        b{
+
+        b {
           font-size: 16px;
         }
 
-        p{
+        p {
           margin: 0;
           font-size: 14px;
         }
@@ -185,42 +229,50 @@ header {
   }
 
 }
-.section_7{
+
+.section_7 {
   padding-bottom: 0;
   background: url("./../img/sec_7_confety.png") top left no-repeat,
   url("./../img/sec_7_light.png") bottom right no-repeat;
-  .row:first-child{
-    margin-bottom: 245px;
+
+  .row:first-child {
+    margin-bottom: 96px;
   }
 }
-footer.section{
+
+footer.section {
   padding: 236px 0 100px;
-  a{
+
+  a {
     display: flex;
     color: $accent-color;
     text-align: left;
   }
-  p{
+
+  p {
     margin: 0;
   }
-  .footer{
-    &-download{
+
+  .footer {
+    &-download {
       margin-top: 50px;
       margin-bottom: 110px;
-      a{
+
+      a {
         padding: 1rem 3rem;
         margin: 0 25px;
       }
     }
 
-    &-bottom{
-      h4{
+    &-bottom {
+      h4 {
         font-family: "Mother Corpus", sans-serif;
         font-size: 20px;
         line-height: 24px;
         margin-bottom: 8px;
       }
-      p{
+
+      p {
         font-size: 16px;
         line-height: 22px;
         font-weight: 600;
