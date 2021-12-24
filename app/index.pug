@@ -13,18 +13,19 @@ html(lang='ua')
             .container
                 nav.navbar.navbar-expand-lg
                     a.navbar-brand.font-family-motter(href='#') Cornelia
-                    button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+                    button.navbar-toggler.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
                         span.navbar-toggler-icon
                     #navbarNav.collapse.navbar-collapse
-                        ul.navbar-nav.ms-auto
-                            li.nav-item
-                                a.nav-link.active( href='#') Learn
+                        ul.navbar-nav.ms-auto.text-end
+                            li.nav-item.active
+                                a.nav-link( href='#') Learn
                             li.nav-item
                                 a.nav-link(href='#') About
                             li.nav-item
                                 a.nav-link(href='#') Why
-                    form.form-inline.form-download
-                        button.btn.bg-dark-green.text-accent(type='submit') Download
+
+                        form.form-inline.form-download.d-flex.justify-content-center
+                            button.btn.bg-dark-green.text-accent(type='submit') Download
 
         section.section.section_1
             .container.text-center
@@ -41,28 +42,29 @@ html(lang='ua')
         section.section.section_3.text-accent.bg-dark-green
             .container
                 .row.align-items-center
-                    .col-6
+                    .col-md-6
                         h3 Choose your destiny
                         p Each unicorn has its own personality and symbolism. Get to know your new mascot and surround yourself with a strong ally. Thus choose the brave one and you will be able to face any situation. Take the sweet Cornelia and protect your health. If you need more luck, meet the Magic Cornelia! If you’re born to be bold, choose the Impetuous Cornelia : nothing will defeat you.
                         a.btn.btn-border.text-accent(href='#') Learn more about her story
-                    .col-6
+                    .col-md-6
                         img(src="./img/sec_3_horse.png")
 
         section.section.section_4
             .container.block-even-odd
                 .row
-                    .col-6
+                    .col-md-6
                         img(src='./img/sec_4_horse_pinc.png')
-                    .col-6
+                    .col-md-6
                         h3 Always <br>Go Further
                         p Decline Cornelia as you wish! Black, dark grey, white, light grey, prussian blue ... Choose your colour, size and characteristics! And if that's not enough, personalise it to make it unique, in your own image. So open up the field of possibilities,  the world is yours !
-                        a.btn-link(href='#')
-                            img.me-2(src='./img/icons/sec_4_mouse_scroll.svg')
-                            span.text-uppercase Scroll TO KNOW MORE
+                        p
+                            a.btn-link(href='#')
+                                img.me-2(src='./img/icons/sec_4_mouse_scroll.svg')
+                                span.text-uppercase Scroll TO KNOW MORE
                 .row
-                    .col-6
+                    .col-md-6
                         img(src='./img/sec_4_horse_green.png')
-                    .col-6
+                    .col-md-6
                         h3 Premium <br>  3D Quality
                         p Now the difference between a unicorn and a pegasus is quite clear a unicorn has a horn which usually stores their magically powers while a pegasus can only fly with its gorgeous wings. Now the difference between a unicorn and a pegasus is quite clear a unicorn has a horn.
 
@@ -80,87 +82,89 @@ html(lang='ua')
                             .item-author.d-flex.align-items-center
                                 .item-author-image
                                     img(src='./img/sec_6_first_face.png')
-                                p.item-author-info.flex-grow-1 <b>Peter Miguel</b><br>
+                                p.item-author-info.flex-grow-1 <b>Peter Miguel </b><br>
                                     |CEO @Combinator
                     .item
                             p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque libero cras
                             .item-author.d-flex.align-items-center
                                 .item-author-image
                                     img(src='./img/sec-6-comments/sec_6_second_face.png')
-                                p.item-author-info.flex-grow-1 <b>Linda R. Huff</b><br>
+                                p.item-author-info.flex-grow-1 <b>Linda R. Huff </b><br>
                                     | Happiness Manager @BlueSky
                     .item
                             p We can't understand how we've been living without Cornelia. We have no regrets! Since I invested in Cornelia I made over 100,000 dollars profits. Needless to say we are extremely satisfied with the results. Cornelia is the most valuable business resource we have EVER purchased. Definitely worth the investment. Not able to tell you how happy I am with Cornelia. I am so pleased with this product.
                             .item-author.d-flex.align-items-center
                                 .item-author-image
                                     img(src='./img/sec-6-comments/sec_6_third_face.png')
-                                p.item-author-info.flex-grow-1 <b>Valentine Sutton</b><br>
+                                p.item-author-info.flex-grow-1 <b>Valentine Sutton </b><br>
                                     | Product Designer @Tools
                     .item
                             p Cornelia has got everything I need. Your company is truly upstanding and is behind its product 100%. I can't say enough about Cornelia. I'm good to go.
                             .item-author.d-flex.align-items-center
                                 .item-author-image
                                     img(src='./img/sec-6-comments/sec_6_fourth_face.png')
-                                p.item-author-info.flex-grow-1 <b>Helen Womack</b><br>
+                                p.item-author-info.flex-grow-1 <b>Helen Womack </b><br>
                                     | CTO @Stoock
                     .item
                             p Without Cornelia, we would have gone bankrupt by now
                             .item-author.d-flex.align-items-center
                                 .item-author-image
                                     img(src='./img/sec-6-comments/sec_6_fifth_face.png')
-                                p.item-author-info.flex-grow-1 <b>Sarah Ewing</b><br>
+                                p.item-author-info.flex-grow-1 <b>Sarah Ewing </b><br>
                                     | Digital Manager @FullSocial
                     .item
                             p Cornelia did exactly what you said it does. I'd be lost without Cornelia. I just can't get enough of Cornelia. I want to get a T-Shirt with Cornelia on it so I can show it off to everyone. I would like to personally thank you for your outstanding product.
                             .item-author.d-flex.align-items-center
                                 .item-author-image
                                     img(src='./img/sec_6_first_face.png')
-                                p.item-author-info.flex-grow-1 <b>Peter Miguel</b><br>
+                                p.item-author-info.flex-grow-1 <b>Peter Miguel </b><br>
                                     | CEO @Combinator
                     .item
                             p We were treated like royalty
                             .item-author.d-flex.align-items-center
                                 .item-author-image
                                     img(src='./img/sec_6_first_face.png')
-                                p.item-author-info.flex-grow-1 <b>Peter Miguel</b><br>
+                                p.item-author-info.flex-grow-1 <b>Peter Miguel </b><br>
                                     | CEO @Combinator
                     .item
                             p I don't know what else to say. I made back the purchase price in just 48 hours! The service was excellent. Cornelia saved my business. I love Cornelia. We've seen amazing results already. Cornelia is the most valuable business resource we have EVER purchased. If you aren't sure, always go for Cornelia.
                             .item-author.d-flex.align-items-center
                                 .item-author-image
                                     img(src='./img/sec_6_first_face.png')
-                                p.item-author-info.flex-grow-1 <b>Peter Miguel</b><br>
+                                p.item-author-info.flex-grow-1 <b>Peter Miguel </b><br>
                                     | CEO @Combinator
                     .item
                             p We've seen amazing results already. Buy this now. I couldn't have asked for more than this. Cornelia has completely surpassed our expectations. I just can't get enough of Cornelia. I want to get a T-Shirt with Cornelia on it so I can show it off to everyone. Thanks to Cornelia, we've just launched our 5th website! I will let my mum know about this, she could really make use of Cornelia! Thanks for the great service. The service was excellent. Cornelia is worth much more than I paid. I would gladly pay over 600 dollars for Cornelia. We can't understand how we've been living without Cornelia.
                             .item-author.d-flex.align-items-center
                                 .item-author-image
                                     img(src='./img/sec_6_first_face.png')
-                                p.item-author-info.flex-grow-1 <b>Peter Miguel</b><br>
-                                    | CEO @Combinator
+                                p.item-author-info.flex-grow-1 <b>Peter Miguel </b><br>
+                                    |CEO @Combinator
         section.section.section_7
             .container.block-even-odd
                 .row
-                    .col-6
+                    .col-md-6
                         img(src='./img/sec_7_circles.png')
-                    .col-6
+                    .col-md-6
                         h3 Always <br>Go Further
                         p Decline Cornelia as you wish! Black, dark grey, white, light grey, prussian blue ... Choose your colour, size and characteristics! And if that's not enough, personalise it to make it unique, in your own image. So open up the field of possibilities,  the world is yours !
-                        a.btn.btn-border(href='#') Discover Cornelia
+                        p
+                            a.btn.btn-border(href='#') Discover Cornelia
 
                 .row
-                    .col-6
+                    .col-md-6
                         img(src='./img/sec_7_horse.png')
-                    .col-6
+                    .col-md-6
                         .text-center
                             img(src='./img/sec_7_logo-app-store.png')
                         h3 Premium <br>  3D Quality
                         p Now the difference between a unicorn and a pegasus is quite clear a unicorn has a horn which usually stores their magically powers while a pegasus can only fly with its gorgeous wings. Now the difference between a unicorn and a pegasus is quite clear a unicorn has a horn.
-                        a.btn.btn-border(href='#') Meet Cornelia in VR
+                        p
+                            a.btn.btn-border(href='#') Meet Cornelia in VR
 
         footer.section.bg-dark-green.text-accent
             .container
-                h2.text-center Get started with<br>Cornelia today
+                h2.text-center Get started with<br> Cornelia today
                 div.d-flex.justify-content-center.footer-download
                     a.btn.btn-border.btn-border-bottom-transparent(href='#')
                         img.me-2(src='./img/icons/Figma-logo 1.svg')

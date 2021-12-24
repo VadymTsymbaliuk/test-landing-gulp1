@@ -1,14 +1,25 @@
 @import "node_modules/bootstrap/scss/bootstrap";
 @import "fonts";
 
-$font-size: 24px;
+$font-size: (
+        xl:24px,
+        lg:16px,
+        md:14px
+);
 $dark-green: rgb(11, 65, 65);
 $darker-green: #0b1f1f;
 $accent-color: #FFCCBC;
 $light-gray: #e5e5e5;
+$comment_grid_column: (
+        xl:3,
+        lg:2,
+        md:1
+
+);
+
 
 html, body {
-  font-size: $font-size;
+  font-size: map-get($font-size,'xl');
   color: $dark-green;
   font-family: 'Nunito Sans', sans-serif;
 }
@@ -135,6 +146,44 @@ p {
 //*****
 header {
   .navbar {
+    &-toggler{
+      border: $accent-color solid 2px;
+
+      &-icon{
+        position: relative;
+        &::before, &::after{
+          content: '';
+          position: absolute;
+          width: 1.35rem;
+          height: 2px;
+          background-color: $accent-color;
+          top: .5rem;
+
+        }
+        &::before{
+         transform-origin: left center;
+          transform: rotate(45deg);
+          left: 0;
+          transition: 0.5s;
+        }
+        &::after{
+          transform-origin: right center;
+          transform: rotate(-45deg);
+          right: 0;
+          transition: 0.5s;
+        }
+      }
+      &:not(.collapsed){
+        .navbar-toggler-icon{
+          &::before{
+            left: .45rem;
+          }
+          &::after{
+            right: .45rem;
+          }
+        }
+      }
+    }
     &-brand {
       font-size: 26px;
       line-height: 31px;
@@ -142,13 +191,18 @@ header {
 
     &-nav {
       li.nav-item {
-        a {
+        &:not(:last-child){
+          margin-bottom: 1rem;
+        }
+        a.nav-link {
           font-weight: 600;
           font-size: 16px;
           line-height: 22px;
+          display: inline-block;
+          padding: 0.75rem 1.5rem;
         }
 
-        a.active {
+        &.active a{
           border-bottom: 2px solid $dark-green;
         }
       }
@@ -158,6 +212,11 @@ header {
   .form-download {
     button {
       margin-left: 36px;
+    }
+    @include media-breakpoint-down(lg) {
+      button{
+        margin: 0;
+      }
     }
   }
 }
@@ -227,7 +286,7 @@ header {
 
     .item {
       align-self: flex-start;
-      width: calc((100% - 48px) / 3);
+      width: calc((100% - map-get($font-size,'xl')) / map-get($comment_grid_column, 'xl'));
       min-width: 200px;
       padding: 20px;
       background-color: rgba(255, 255, 255, 0.8);
@@ -301,6 +360,89 @@ footer.section {
         font-size: 16px;
         line-height: 22px;
         font-weight: 600;
+      }
+    }
+  }
+}
+@include media-breakpoint-down(lg){
+ html, body{
+   font-size: map-get($font-size,'lg');
+ }
+  br{
+    display: none;
+  }
+  .section{
+    padding: 50px 0;
+    &_1{
+      padding-top: 80px;
+    }
+    &_2{
+      padding: 140px 0;
+    }
+    &_3{
+      padding: 80px 0 35px;
+    }
+    &_4{
+      padding: 80px 0 40px;
+    }
+    &_5{
+      padding: 80px 0 300px;
+      background-size: auto 250px;
+    }
+    &_6{
+      padding-bottom: 60px;
+      .comments{
+        .item{
+          width: calc((100% - map-get($font-size,'lg')) / map-get($comment_grid_column, 'lg'));
+        }
+      }
+    }
+    &_7{
+      .row:first-child{
+        margin-bottom: 40px;
+      }
+    }
+  }
+  footer.section{
+    padding: 110px 0 50px;
+  }
+
+}
+@include media-breakpoint-down(md){
+  html, body{
+    font-size: map-get($font-size, 'md');
+  }.section{
+
+      &_2{
+        padding: 40px 0;
+      }
+      &_3{
+        padding: 40px 0 15px;
+      }
+     &_4{
+       padding: 40px 0 20px;
+     }
+      &_6{
+        padding-bottom: 60px;
+        .comments{
+          .item{
+            width: calc((100% - map-get($font-size,'md')) / map-get($comment_grid_column, 'md'));
+          }
+        }
+      }
+     }
+  .block-even-odd {
+    .row {
+      &:not(:last-child){
+        margin-bottom: 60px;
+      }
+      &:nth-child(odd) {
+        [class*='col']:first-child{
+          order: 2;
+        }
+        [class*='col']:last-child{
+          order: 1;
+        }
       }
     }
   }
