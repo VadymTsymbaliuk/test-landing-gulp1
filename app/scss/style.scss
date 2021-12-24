@@ -135,6 +135,44 @@ p {
 //*****
 header {
   .navbar {
+    &-toggler{
+      border: $accent-color solid 2px;
+
+      &-icon{
+        position: relative;
+        &::before, &::after{
+          content: '';
+          position: absolute;
+          width: 32.5px;
+          height: 2px;
+          background-color: $accent-color;
+          top: 12px;
+
+        }
+        &::before{
+         transform-origin: left center;
+          transform: rotate(45deg);
+          left: 0;
+          transition: 0.5s;
+        }
+        &::after{
+          transform-origin: right center;
+          transform: rotate(-45deg);
+          right: 0;
+          transition: 0.5s;
+        }
+      }
+      &:not(.collapsed){
+        .navbar-toggler-icon{
+          &::before{
+            left: 11px;
+          }
+          &::after{
+            right: 11px;
+          }
+        }
+      }
+    }
     &-brand {
       font-size: 26px;
       line-height: 31px;
@@ -142,13 +180,18 @@ header {
 
     &-nav {
       li.nav-item {
-        a {
+        &:not(:last-child){
+          margin-bottom: 1rem;
+        }
+        a.nav-link {
           font-weight: 600;
           font-size: 16px;
           line-height: 22px;
+          display: inline-block;
+          padding: 0.75rem 1.5rem;
         }
 
-        a.active {
+        &.active a{
           border-bottom: 2px solid $dark-green;
         }
       }
@@ -158,6 +201,11 @@ header {
   .form-download {
     button {
       margin-left: 36px;
+    }
+    @include media-breakpoint-down(lg) {
+      button{
+        margin: 0;
+      }
     }
   }
 }

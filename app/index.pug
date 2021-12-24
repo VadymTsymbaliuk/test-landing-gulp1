@@ -16,15 +16,16 @@ html(lang='ua')
                     button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
                         span.navbar-toggler-icon
                     #navbarNav.collapse.navbar-collapse
-                        ul.navbar-nav.ms-auto
-                            li.nav-item
-                                a.nav-link.active( href='#') Learn
+                        ul.navbar-nav.ms-auto.text-end
+                            li.nav-item.active
+                                a.nav-link( href='#') Learn
                             li.nav-item
                                 a.nav-link(href='#') About
                             li.nav-item
                                 a.nav-link(href='#') Why
-                    form.form-inline.form-download
-                        button.btn.bg-dark-green.text-accent(type='submit') Download
+
+                        form.form-inline.form-download.d-flex.justify-content-center
+                            button.btn.bg-dark-green.text-accent(type='submit') Download
 
         section.section.section_1
             .container.text-center
