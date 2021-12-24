@@ -1,14 +1,25 @@
 @import "node_modules/bootstrap/scss/bootstrap";
 @import "fonts";
 
-$font-size: 24px;
+$font-size: (
+        xl:24px,
+        lg:16px,
+        md:14px
+);
 $dark-green: rgb(11, 65, 65);
 $darker-green: #0b1f1f;
 $accent-color: #FFCCBC;
 $light-gray: #e5e5e5;
+$comment_grid_column: (
+        xl:3,
+        lg:2,
+        md:1
+
+);
+
 
 html, body {
-  font-size: $font-size;
+  font-size: map-get($font-size,'xl');
   color: $dark-green;
   font-family: 'Nunito Sans', sans-serif;
 }
@@ -143,10 +154,10 @@ header {
         &::before, &::after{
           content: '';
           position: absolute;
-          width: 32.5px;
+          width: 1.35rem;
           height: 2px;
           background-color: $accent-color;
-          top: 12px;
+          top: .5rem;
 
         }
         &::before{
@@ -165,10 +176,10 @@ header {
       &:not(.collapsed){
         .navbar-toggler-icon{
           &::before{
-            left: 11px;
+            left: .45rem;
           }
           &::after{
-            right: 11px;
+            right: .45rem;
           }
         }
       }
@@ -275,7 +286,7 @@ header {
 
     .item {
       align-self: flex-start;
-      width: calc((100% - 48px) / 3);
+      width: calc((100% - map-get($font-size,'xl')) / map-get($comment_grid_column, 'xl'));
       min-width: 200px;
       padding: 20px;
       background-color: rgba(255, 255, 255, 0.8);
@@ -349,6 +360,63 @@ footer.section {
         font-size: 16px;
         line-height: 22px;
         font-weight: 600;
+      }
+    }
+  }
+}
+@include media-breakpoint-down(lg){
+ html, body{
+   font-size: map-get($font-size,'lg');
+ }
+  br{
+    display: none;
+  }
+  .section{
+    padding: 50px 0;
+    &_1{
+      padding-top: 80px;
+    }
+    &_2{
+      padding: 140px 0;
+    }
+    &_3{
+      padding: 80px 0 35px;
+    }
+    &_4{
+      padding: 80px 0 40px;
+    }
+    &_5{
+      padding: 80px 0 300px;
+      background-size: auto 250px;
+    }
+    &_6{
+      padding-bottom: 60px;
+      .comments{
+        .item{
+          width: calc((100% - map-get($font-size,'lg')) / map-get($comment_grid_column, 'lg'));
+        }
+      }
+    }
+    &_7{
+      .row:first-child{
+        margin-bottom: 40px;
+      }
+    }
+  }
+  footer.section{
+    padding: 110px 0 50px;
+  }
+
+}
+@include media-breakpoint-down(md){
+  html, body{
+    font-size: map-get($font-size, 'md');
+  }
+  .section_6{
+    padding-bottom: 60px;
+    .comments{
+      .item{
+        width: calc((100% - map-get($font-size,'md')) / map-get($comment_grid_column, 'md'));
       }
     }
   }
