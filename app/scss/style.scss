@@ -145,6 +145,12 @@ p {
 
 //*****
 header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: #fff;
   .navbar {
     &-toggler{
       border: $accent-color solid 2px;
@@ -222,6 +228,7 @@ header {
 }
 
 .section_1 {
+  margin-top: 108px;
   padding: 120px 0 120px;
   position: relative;
 
@@ -276,7 +283,7 @@ header {
   }
 
   .comments {
-    align-content: flex-start;
+
     font-size: 13px;
 
     p {
@@ -285,7 +292,7 @@ header {
     }
 
     .item {
-      align-self: flex-start;
+
       width: calc((100% - map-get($font-size,'xl')) / map-get($comment_grid_column, 'xl'));
       min-width: 200px;
       padding: 20px;
