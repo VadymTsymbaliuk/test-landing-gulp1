@@ -6,6 +6,9 @@
   "scripts": {
     "start": "gulp build"
   },
+  "engines": {
+    "node": "14.x"
+  },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@gitlab.com/vadymonua/using_gulp.git"
